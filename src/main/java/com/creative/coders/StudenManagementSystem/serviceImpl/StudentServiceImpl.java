@@ -1,13 +1,14 @@
-package com.creative.coders.StudenManagementSystem.service;
+package com.creative.coders.StudenManagementSystem.serviceImpl;
 
 import com.creative.coders.StudenManagementSystem.entity.Student;
 import com.creative.coders.StudenManagementSystem.repository.StudentRepository;
+import com.creative.coders.StudenManagementSystem.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 @Service
-public class StudentServiceImpl implements StudentService{
+public class StudentServiceImpl implements StudentService {
     @Autowired
     StudentRepository studentRepository;
     @Override
