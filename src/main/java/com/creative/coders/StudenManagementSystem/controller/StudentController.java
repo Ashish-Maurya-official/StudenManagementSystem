@@ -44,6 +44,8 @@ public class StudentController {
         // Fetch and update existing student
         Student existingStudent = studentService.getStudentById(id);
         existingStudent.setName(student.getName());
+        existingStudent.setCity(student.getCity());
+        existingStudent.setCourse(student.getCourse());
         existingStudent.setEmail(student.getEmail());
         studentService.saveStudent(existingStudent);
         return "redirect:/students";
