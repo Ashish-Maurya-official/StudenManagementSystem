@@ -9,4 +9,5 @@ public interface StudentService{
     public Student getStudentById(int id);
     public List<Student> getAllStudent();
     public void removeStudentById(int id);
+    public Student updateStudentById(int id,Student student);
 }
