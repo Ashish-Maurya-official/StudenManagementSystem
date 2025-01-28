@@ -23,7 +23,7 @@ public class StudentController {
 
     @GetMapping("/students/new")
     public String createStudentForm(Model model) {
-        model.addAttribute("student", new Student()); // Corrected attribute name
+        model.addAttribute("student", new Student());
         return "create-student";
     }
 
