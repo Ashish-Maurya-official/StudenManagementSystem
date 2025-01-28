@@ -18,7 +18,7 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public Student getStudentById(int id) {
-        return studentRepository.findById(id).orElseThrow(()->new RuntimeException("Account does not found"));
+        return studentRepository.findById(id).get();
     }
 
     @Override
