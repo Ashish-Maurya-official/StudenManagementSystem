@@ -32,12 +32,13 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public Student updateStudentById(int id, Student student) {
+    public void updateStudentById(int id, Student student) {
         Student existingStudent = getStudentById(id);
         existingStudent.setName(student.getName());
         existingStudent.setCity(student.getCity());
         existingStudent.setCourse(student.getCourse());
         existingStudent.setEmail(student.getEmail());
-        return existingStudent;
+        saveStudent(existingStudent);
+
     }
 }

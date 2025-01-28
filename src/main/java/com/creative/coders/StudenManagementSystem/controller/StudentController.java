@@ -41,8 +41,7 @@ public class StudentController {
 
     @PostMapping("/students/edit/{id}")
     public String updateStudent(@PathVariable int id, @ModelAttribute("student") Student student) {
-        Student existingStudent=studentService.updateStudentById(id,student);
-        studentService.saveStudent(existingStudent);
+        studentService.updateStudentById(id,student);
         return "redirect:/students";
     }
 
